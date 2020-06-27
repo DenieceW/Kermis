@@ -1,6 +1,6 @@
 package com.miniopdrachtenqien;
 
-public class Attractie extends RisicoRijkeAttracties{
+public class Attractie{
      String naam;
      double prijs;
      double omzet;
@@ -8,7 +8,6 @@ public class Attractie extends RisicoRijkeAttracties{
      static int totaalKaartjesGekocht;
 
     void draaien(){
-        this.draailimiet++;
         this.kaartjesVerkocht++ ; //kunnen per attractie 12 mensen in
         totaalKaartjesGekocht++;
         System.out.println(this.naam + " draait en kost " + this.prijs + " euros");

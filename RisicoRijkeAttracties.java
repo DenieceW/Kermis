@@ -1,8 +1,9 @@
 package com.miniopdrachtenqien;
 
-abstract class RisicoRijkeAttracties {
-    int draailimiet;
+abstract class RisicoRijkeAttracties extends Attractie  {
     boolean keuring;
+    int draailimiet;
+
 
     void opstellingsKeuring( ){
         this.keuring = false;

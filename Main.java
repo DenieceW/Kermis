@@ -23,16 +23,9 @@ public class Main {
                 kassa.totaleOmzetKermis(botsauto.omzet);
             }
             if (invoer.equals("2")) {
-                System.out.println(spin.keuring);
-                if(spin.draailimiet >= 5){
-                    spin.opstellingsKeuring();
-                    System.out.println(spin.keuring);
-                    spin.monteur();
-                    spin.draailimiet = 0;
-                }else
-                    spin.draaien();
-                    spin.getTotaleOmzetAttractie();
-                    kassa.totaleOmzetKermis(spin.omzet);
+                spin.draaien();
+                spin.getTotaleOmzetAttractie();
+                kassa.totaleOmzetKermis(spin.omzet);
 
             }
             if (invoer.equals("3")) {
@@ -48,14 +41,9 @@ public class Main {
 
             }
             if (invoer.equals("5")) {
-                if(hawaii.draailimiet >= 10){
-                    hawaii.opstellingsKeuring();
-                    hawaii.monteur();
-                    hawaii.draailimiet = 0;
-                }else
-                    hawaii.draaien();
-                    hawaii.getTotaleOmzetAttractie();
-                    kassa.totaleOmzetKermis(hawaii.omzet);
+                hawaii.draaien();
+                hawaii.getTotaleOmzetAttractie();
+                kassa.totaleOmzetKermis(hawaii.omzet);
                 }
 
             if (invoer.equals("6")) {
