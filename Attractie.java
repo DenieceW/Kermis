@@ -9,7 +9,7 @@ public class Attractie extends RisicoRijkeAttracties{
 
     void draaien(){
         this.draailimiet++;
-        this.kaartjesVerkocht++ ; //kunnen per attractie 12 mensen in
+        this.kaartjesVerkocht++ ; 
         totaalKaartjesGekocht++;
         System.out.println(this.naam + " draait en kost " + this.prijs + " euros");
     }
