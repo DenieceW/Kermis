@@ -11,7 +11,7 @@ public class Kermis {
     Attractie spiegelpaleis = new SpiegelPaleis("Spiegelpaleis", 2.75);
     Attractie spookhuis = new SpookHuis("Spookhuis", 3.20);
     Attractie hawaii = new Hawaii("Hawaii", 2.90, true);
-    Ladderklimmen ladderklimmen = new Ladderklimmen("Ladderklimmen", 5.00);
+    Attractie ladderklimmen = new Ladderklimmen("Ladderklimmen", 5.00);
 
     public void spelen() {
         belastingDienst();
@@ -22,13 +22,13 @@ public class Kermis {
                 botsauto.draaien();
                 botsauto.printOmzetPerAttractie();
                 kassa.omzetKermis(botsauto.prijs);
-
             }
             if (invoer.equals("2")) {
                 spin.draaien();
-                spin.printOmzetPerAttractie();
-                kassa.omzetKermis(spin.prijs);
-
+                if(((Spin)spin).keuring){
+                    kassa.omzetKermis(spin.prijs);
+                    spin.printOmzetPerAttractie();
+                }
             }
             if (invoer.equals("3")) {
                 spiegelpaleis.draaien();
@@ -39,14 +39,14 @@ public class Kermis {
                 spookhuis.draaien();
                 spookhuis.printOmzetPerAttractie();
                 kassa.omzetKermis(spookhuis.prijs);
-
             }
             if (invoer.equals("5")) {
                 hawaii.draaien();
-                hawaii.printOmzetPerAttractie();
-                kassa.omzetKermis(hawaii.prijs);
+                if(((Hawaii)hawaii).keuring){
+                    hawaii.printOmzetPerAttractie();
+                    kassa.omzetKermis(hawaii.prijs);
+                }
             }
-
             if (invoer.equals("6")) {
                 ladderklimmen.draaien();
                 ladderklimmen.printOmzetPerAttractie();
@@ -58,7 +58,7 @@ public class Kermis {
             if (invoer.equals("b")) {
                 belastingInspecteur.checkAttracties();
                 kassa.bijhoudenBelastingBezoek();
-                kassa.aftrekBelasting(ladderklimmen.kansSpelBelastingBetalen());
+                kassa.aftrekBelasting(((GokAttractie)ladderklimmen).kansSpelBelastingBetalen());
                 kassa.aftrekBelasting(((GokAttractie)spin).kansSpelBelastingBetalen());
             }
             if (invoer.equals("o")) {
@@ -69,7 +69,6 @@ public class Kermis {
                 break;
             }
         }
-
     }
 
     public void belastingDienst(){ //voegt attracties toe aan de lijst van de inspecteur om te checken welke een gokattractie is.

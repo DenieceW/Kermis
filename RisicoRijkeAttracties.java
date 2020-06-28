@@ -5,7 +5,7 @@ abstract class RisicoRijkeAttracties extends Attractie  {
     int draailimiet;
 
 
-    void opstellingsKeuring( ){
+    void opstellingsKeuring(){
         this.keuring = false;
         System.out.println("Deze attractie heeft het draailimiet overschreden en moet gekeurd worden, anders mag deze attractie niet meer open." +
                     "\nHaal de monteur erbij ('m').");
