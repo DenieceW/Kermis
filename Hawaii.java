@@ -9,6 +9,7 @@ public class Hawaii extends RisicoRijkeAttracties{
         this.keuring = keuring;
     }
 
+
     void draaien(){
         this.draailimiet++;
         if(draailimiet <= 10 && this.keuring){
@@ -20,7 +21,6 @@ public class Hawaii extends RisicoRijkeAttracties{
             this.keuring = false;
             opstellingsKeuring();
         }
-
     }
 
 }

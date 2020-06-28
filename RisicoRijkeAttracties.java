@@ -15,6 +15,7 @@ abstract class RisicoRijkeAttracties extends Attractie  {
     void monteur(){
         this.keuring = true;
         System.out.println("De monteur is langgeweest en de attractie is weer goedgekeurd");
+
     }
 
 

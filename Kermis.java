@@ -65,6 +65,10 @@ public class Kermis {
                 kassa.printOmzetKermis();
                 System.out.println("De Belastinginspecteur is vandaag " + kassa.getBezoekBelastingInspecteur() + " keer langsgeweest.");
             }
+            if (invoer.equals("m")){
+                monteur();
+
+            }
             if (invoer.equals("q")) {
                 break;
             }
@@ -88,6 +92,19 @@ public class Kermis {
         hawaii.getKaartjesVerkocht();
         ladderklimmen.getKaartjesVerkocht();
         Attractie.getTotaalAantalKaartjesKermis();
+    }
+
+    public void monteur(){
+        if(!((Hawaii)hawaii).keuring){
+            ((Hawaii)hawaii).monteur();
+            ((Hawaii)hawaii).draailimiet = 0;
+        }
+        if(!((Spin)spin).keuring){
+            ((Spin)spin).monteur();
+            ((Spin)spin).draailimiet = 0;
+        }
+
+
     }
 
 }
