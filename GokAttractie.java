@@ -1,6 +1,6 @@
 package com.miniopdrachtenqien;
 
 public interface GokAttractie {
-    void kansSpelBelastingBetalen();
+    double kansSpelBelastingBetalen();
 
 }

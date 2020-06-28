@@ -11,13 +11,13 @@ public class Hawaii extends RisicoRijkeAttracties{
 
     void draaien(){
         this.draailimiet++;
-        if(draailimiet > 10){
+        if(draailimiet > 5){
             opstellingsKeuring();
-            // monteur();
-        }else
-            this.kaartjesVerkocht++ ;
-        totaalKaartjesGekocht++;
-        System.out.println(this.naam + " draait en kost " + this.prijs + " euros");
-
+        } else
+            this.aantalKaartjesVerkocht++ ;
+            totaalKaartjesVerkocht++;
+            huidigeOmzetPerAttractie = aantalKaartjesVerkocht * prijs;
+            System.out.println( naam  + ": De attractie maakt een ritje");
     }
+
 }

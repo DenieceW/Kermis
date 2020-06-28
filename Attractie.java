@@ -1,29 +1,37 @@
 package com.miniopdrachtenqien;
 
+import java.text.NumberFormat;
+
 public class Attractie{
      String naam;
      double prijs;
      double omzet;
-     int kaartjesVerkocht;
-     static int totaalKaartjesGekocht;
+     double huidigeOmzetPerAttractie;
+     int aantalKaartjesVerkocht;
+     static int totaalKaartjesVerkocht;
+    NumberFormat format = NumberFormat.getCurrencyInstance();
+
 
     void draaien(){
-        this.kaartjesVerkocht++ ; //kunnen per attractie 12 mensen in
-        totaalKaartjesGekocht++;
-        System.out.println(this.naam + " draait en kost " + this.prijs + " euros");
+        aantalKaartjesVerkocht++;
+        totaalKaartjesVerkocht++;
+        System.out.println( naam  + ": De attractie maakt een ritje");
     }
 
-    void getTotaleOmzetAttractie(){
-        this.omzet = this.kaartjesVerkocht * this.prijs;
-        System.out.println("De omzet van de " + this.naam + " is " + this.omzet + " euro.");
+    double getOmzet(){
+        return omzet = aantalKaartjesVerkocht * prijs;
+    }
+
+    void printOmzetPerAttractie(){
+        System.out.println(naam + ": Omzet is: " + format.format(getOmzet()) + ".");
     }
 
     void getKaartjesVerkocht(){
-        System.out.println("Er zijn bij de " + this.naam + " " + this.kaartjesVerkocht + " kaartjes verkocht.");
+        System.out.println( naam + ": " + aantalKaartjesVerkocht + " kaartjes verkocht.");
     }
 
     static void getTotaalAantalKaartjesKermis(){
-        System.out.println("Er zijn in totaal " + totaalKaartjesGekocht + " kaartjes verkocht");
+        System.out.println("Er zijn in totaal " + totaalKaartjesVerkocht + " kaartjes verkocht.");
     }
 
 }

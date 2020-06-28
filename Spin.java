@@ -1,26 +1,28 @@
 package com.miniopdrachtenqien;
 
- class Spin extends RisicoRijkeAttracties {
+ class Spin extends RisicoRijkeAttracties implements GokAttractie{
 
     Spin(String naam, double prijs, boolean keuring){
         this.naam = naam;
         this.prijs = prijs;
         this.draailimiet = 0;
         this.keuring = keuring;
-
-
     }
+
+     public double kansSpelBelastingBetalen(){
+         return this.omzet -= (0.7 * this.omzet);
+     }
 
     void draaien(){
         this.draailimiet++;
-        if(draailimiet > 5){
-            opstellingsKeuring();
-           // monteur();
-        }else
-            this.kaartjesVerkocht++ ;
-        totaalKaartjesGekocht++;
-        System.out.println(this.naam + " draait en kost " + this.prijs + " euros");
-
+//        if(draailimiet > 5){
+//            opstellingsKeuring();
+//        } else
+            this.aantalKaartjesVerkocht++ ;
+            totaalKaartjesVerkocht++;
+            huidigeOmzetPerAttractie = aantalKaartjesVerkocht * prijs;
+            System.out.println( naam  + ": De attractie maakt een ritje");
     }
+
  }
 
