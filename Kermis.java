@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Kermis {
     Scanner scanner = new Scanner(System.in);
+    Notificaties notificaties = new Notificaties();
     Kassa kassa = new Kassa();
     BelastingInspecteur belastingInspecteur = new BelastingInspecteur();
     Attractie botsauto = new Botsauto("Botsauto", 2.50);
@@ -15,6 +16,7 @@ public class Kermis {
 
     public void spelen() {
         belastingDienst();
+        notificaties.printWelkom();
 
         while (true) {
             String invoer = scanner.nextLine();
@@ -63,11 +65,10 @@ public class Kermis {
             }
             if (invoer.equals("o")) {
                 kassa.printOmzetKermis();
-                System.out.println("De Belastinginspecteur is vandaag " + kassa.getBezoekBelastingInspecteur() + " keer langsgeweest.");
+                System.out.println("De Belastinginspecteur is vandaag " + kassa.getBezoekBelastingInspecteur() + " keer langsgeweest. ");
             }
             if (invoer.equals("m")){
                 monteur();
-
             }
             if (invoer.equals("q")) {
                 break;
@@ -103,9 +104,6 @@ public class Kermis {
             ((Spin)spin).monteur();
             ((Spin)spin).draailimiet = 0;
         }
-
-
     }
-
 }
 

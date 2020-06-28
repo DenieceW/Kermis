@@ -21,8 +21,6 @@ public class BelastingInspecteur {
                 System.out.println(attractie.naam + ": geen gokattractie");
         }
     }
-
-
 }
 
 

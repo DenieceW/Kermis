@@ -11,7 +11,6 @@ public class Attractie{
      static int totaalKaartjesVerkocht;
     NumberFormat format = NumberFormat.getCurrencyInstance();
 
-
     void draaien(){
         aantalKaartjesVerkocht++;
         totaalKaartjesVerkocht++;
