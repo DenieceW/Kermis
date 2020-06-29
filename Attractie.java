@@ -17,19 +17,24 @@ public class Attractie{
         System.out.println( naam  + ": De attractie maakt een ritje");
     }
 
+
     double getOmzet(){
         return omzet = aantalKaartjesVerkocht * prijs;
+    }
+
+    double getPrijs(){
+        return prijs;
     }
 
     void printOmzetPerAttractie(){
         System.out.println(naam + ": Omzet is: " + format.format(getOmzet()) + ".");
     }
 
-    void getKaartjesVerkocht(){
+    void printKaartjesVerkocht(){
         System.out.println( naam + ": " + aantalKaartjesVerkocht + " kaartjes verkocht.");
     }
 
-    static void getTotaalAantalKaartjesKermis(){
+    static void printTotaalAantalKaartjesKermis(){
         System.out.println("Er zijn in totaal " + totaalKaartjesVerkocht + " kaartjes verkocht.");
     }
 

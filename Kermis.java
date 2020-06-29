@@ -23,36 +23,36 @@ public class Kermis {
             if (invoer.equals("1")) {
                 botsauto.draaien();
                 botsauto.printOmzetPerAttractie();
-                kassa.omzetKermis(botsauto.prijs);
+                kassa.omzetKermis(botsauto.getPrijs());
             }
             if (invoer.equals("2")) {
                 spin.draaien();
                 if(((Spin)spin).keuring){
-                    kassa.omzetKermis(spin.prijs);
+                    kassa.omzetKermis(spin.getPrijs());
                     spin.printOmzetPerAttractie();
                 }
             }
             if (invoer.equals("3")) {
                 spiegelpaleis.draaien();
                 spiegelpaleis.printOmzetPerAttractie();
-                kassa.omzetKermis(spiegelpaleis.prijs);
+                kassa.omzetKermis(spiegelpaleis.getPrijs());
             }
             if (invoer.equals("4")) {
                 spookhuis.draaien();
                 spookhuis.printOmzetPerAttractie();
-                kassa.omzetKermis(spookhuis.prijs);
+                kassa.omzetKermis(spookhuis.getPrijs());
             }
             if (invoer.equals("5")) {
                 hawaii.draaien();
                 if(((Hawaii)hawaii).keuring){
                     hawaii.printOmzetPerAttractie();
-                    kassa.omzetKermis(hawaii.prijs);
+                    kassa.omzetKermis(hawaii.getPrijs());
                 }
             }
             if (invoer.equals("6")) {
                 ladderklimmen.draaien();
                 ladderklimmen.printOmzetPerAttractie();
-                kassa.omzetKermis(ladderklimmen.prijs);
+                kassa.omzetKermis(ladderklimmen.getPrijs());
             }
             if (invoer.equals("k")) {
                 aantalKaartjesVerkocht();
@@ -86,13 +86,13 @@ public class Kermis {
     }
 
     public void aantalKaartjesVerkocht(){
-        botsauto.getKaartjesVerkocht();
-        spin.getKaartjesVerkocht();
-        spiegelpaleis.getKaartjesVerkocht();
-        spookhuis.getKaartjesVerkocht();
-        hawaii.getKaartjesVerkocht();
-        ladderklimmen.getKaartjesVerkocht();
-        Attractie.getTotaalAantalKaartjesKermis();
+        botsauto.printKaartjesVerkocht();
+        spin.printKaartjesVerkocht();
+        spiegelpaleis.printKaartjesVerkocht();
+        spookhuis.printKaartjesVerkocht();
+        hawaii.printKaartjesVerkocht();
+        ladderklimmen.printKaartjesVerkocht();
+        Attractie.printTotaalAantalKaartjesKermis();
     }
 
     public void monteur(){
